@@ -8,6 +8,7 @@
 */
 
 import 'dart:math' as math;
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -350,9 +351,7 @@ class _DropdownMenuState<T> extends State<_DropdownMenu<T>> {
   ScrollbarThemeData? get _scrollbarTheme => dropdownStyle.scrollbarTheme;
 
   bool? get _iOSThumbVisibility =>
-      _scrollbarTheme?.thumbVisibility!.resolve(_states) ??
-      // ignore: deprecated_member_use
-      _scrollbarTheme?.isAlwaysShown;
+      _scrollbarTheme?.thumbVisibility!.resolve(_states) ?? false;
 
   Widget get _materialScrollBar => Theme(
         data: Theme.of(context).copyWith(
