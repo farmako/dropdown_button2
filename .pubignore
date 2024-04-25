@@ -16,6 +16,8 @@ coverage/
 *.iws
 .idea/
 
+.fvm
+
 # Flutter/Dart/Pub related
 **/doc/api/
 .dart_tool/
